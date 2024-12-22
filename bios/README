@@ -1,0 +1,28 @@
+# Bash Script to Connect to ESXi Servers and Retrieve BIOS Version
+
+## Purpose This script connects to multiple servers using SSH and retrieves the BIOS version information for each server. It prompts the user for a username, password, and an optional server file name.
+
+
+Script Details
+
+Prompts:
+
+The script prompts the user to enter a username and password.
+
+It also prompts for the server file name, defaulting to "server" if none is provided.
+
+Server File:
+
+The server file should contain a list of server addresses, one per line.
+
+Functionality:
+
+The script checks if the provided server file exists. If not, it exits with an error message.
+
+It reads each server address from the file and attempts to connect using SSH.
+
+It runs the smbiosDump command on each server to retrieve the BIOS version.
+
+If the connection or command fails, it outputs an error message.
+
+
