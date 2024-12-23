@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Prompt for username and password
-read -p "Please enter the username: " user
-read -sp "Please enter the password: " password
+read -rp "Please enter the username: " user
+read -rsp "Please enter the password: " password
 echo ""
 
 # Prompt for the server file
@@ -16,11 +16,11 @@ if [[ ! -f "$server_file" ]]; then
 fi
 
 # Loop through each server in the file
-while IFS= read -r server; do
+for server in $(cat "$server_file"); do
     echo "Connecting to: $server"
     sshpass -p "$password" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 "$user@$server" \
     "smbiosDump | grep -A 4 'BIOS Info' | grep -i version" 2>/dev/null
     if [[ $? -ne 0 ]]; then
         echo "Failed to connect to $server or command error."
     fi
-done < "$server_file"
+done
