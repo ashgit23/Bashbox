@@ -1,0 +1,18 @@
+VMNIC Firmware and Driver Validation Script
+===========================================
+
+This script is used to fetch and validate the firmware and driver details of NICs (vmnic) on ESXi hosts. It helps identify potential network issues during VM migrations caused by mismatched NIC firmware or driver versions.
+
+NB: This script is particularly useful for troubleshooting network-related issues during VM migrations.
+
+Usage
+=====
+
+Create a file named server in the same directory as the script, containing the IP addresses or hostnames of ESXi hosts (one per line).
+
+Run the script and enter the user name and password when prompted.
+
+Output
+=====
+
+The script logs into each ESXi host and outputs firmware/driver details for each NIC in a sorted manner.
