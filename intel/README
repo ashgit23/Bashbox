@@ -1,0 +1,9 @@
+# BMC Reset Script  
+
+## Description  
+This script resets the Baseboard Management Controller (BMC) for multiple Intel servers using ipmitool. It supports batch processing, error handling, and logging of failed hosts.  
+
+## Features  
+- **Batch Execution**: Allows resetting multiple servers in parallel.  
+- **Error Logging**: Saves a list of servers with failed resets to a file.  
+- **User Input**: Flexible input for username, password, and batch size.  
