@@ -1,0 +1,17 @@
+# Validate User Access and Uptime with Bash
+
+## Description
+This Bash script simplifies the process of validating user access on multiple servers and checking their uptime. It's particularly useful during peer reviews or server transitions, where ensuring proper access is critical.
+
+## Features
+- User Validation: Verify if a specific user can access a list of servers.
+- Uptime Check: Retrieve the uptime of each server as part of the validation.
+
+## Output
+- Displays the uptime for each server where access is validated.
+- Prints a message for servers that cannot be accessed.
+
+## Benefits
+- Saves time compared to manually checking access on each server.
+- Ideal for environments with a large number of servers.
+- Helps validate AD credentials or other user accounts across servers.
