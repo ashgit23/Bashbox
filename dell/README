@@ -1,0 +1,24 @@
+Reboot Multiple Dell Servers via iDRAC (IPMI) Using a Bash Script
+==================================================================
+
+This script automates rebooting Dell servers using their iDRAC (IPMI) interfaces, especially useful during outages when the server OS is unresponsive but the iDRAC remains accessible.
+
+Features
+========
+
+Batch Processing: Reboot multiple servers simultaneously or in custom batch sizes.
+
+Error Logging: Logs servers that failed to reboot for follow-up actions.
+
+Ease of Use: Provides a simple way to input server lists and credentials.
+
+What the Script Does
+=====================
+
+Reads the server list from hostList.txt.
+
+Connects to each server's iDRAC and issues a serveraction powercycle command.
+
+Logs any servers that fail to reboot in failed_hosts.txt
+
+This script simplifies server management during critical times, ensuring quicker recovery and reduced manual effort.
