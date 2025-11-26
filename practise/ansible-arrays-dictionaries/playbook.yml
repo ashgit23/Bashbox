@@ -1,0 +1,24 @@
+- hosts: localhost
+  gather_facts: false
+  vars_files:
+    - vars/main.yml
+
+  tasks:
+    - name: Show array example
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ server_names }}"
+
+    - name: Show dictionary example
+      debug:
+        msg: "DB Engine: {{ db_config.engine }}"
+
+    - name: Show array of dictionaries
+      debug:
+        msg: "Server {{ item.name }} has role {{ item.role }}"
+      loop: "{{ servers }}"
+
+    - name: Show dictionary of arrays
+      debug:
+        msg: "Frontend package: {{ item }}"
+      loop: "{{ packages.frontend }}"

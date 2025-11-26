@@ -1,0 +1,34 @@
+# vars/main.yml
+
+# 1. Array (list)
+server_names:
+  - web01
+  - web02
+  - db01
+
+# 2. Dictionary (map)
+db_config:
+  engine: mysql
+  version: 8.0
+  port: 3306
+
+# 3. Array of dictionaries
+servers:
+  - name: web01
+    role: frontend
+    ip: 192.168.1.10
+  - name: web02
+    role: frontend
+    ip: 192.168.1.11
+  - name: db01
+    role: backend
+    ip: 192.168.1.20
+
+# 4. Dictionary of arrays
+packages:
+  frontend:
+    - nginx
+    - nodejs
+  backend:
+    - mysql
+    - python3
